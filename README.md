@@ -1,6 +1,6 @@
 # @neos21/in-browser-ts : In Browser TS
 
-[![NPM Version](https://img.shields.io/npm/v/@neos21/in-browser-ts.svg)](https://www.npmjs.com/package/@neos21/in-browser-ts) [![GPR Version](https://img.shields.io/github/package-json/v/neos21/in-browser-ts?label=github)](https://github.com/Neos21/in-browser-ts/packages/__ID__)
+[![NPM Version](https://img.shields.io/npm/v/@neos21/in-browser-ts.svg)](https://www.npmjs.com/package/@neos21/in-browser-ts) [![GPR Version](https://img.shields.io/github/package-json/v/neos21/in-browser-ts?label=github)](https://github.com/Neos21/in-browser-ts/packages/1568854)
 
 ブラウザ上で TypeScript コードをコンパイルし Web ページに適用するライブラリ。
 

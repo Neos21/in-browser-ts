@@ -1,0 +1,25 @@
+{
+  "name": "@neos21/in-browser-ts",
+  "version": "0.0.0",
+  "description": "Compile TypeScript in the browser.",
+  "scripts": {
+    "build": "node ./scripts/build.js"
+  },
+  "author": "Neo <neos21@gmail.com> (https://neos21.net/)",
+  "license": "MIT",
+  "homepage": "https://github.com/Neos21/in-browser-ts#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Neos21/in-browser-ts.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Neos21/in-browser-ts/issues"
+  },
+  "funding": {
+    "type": "github",
+    "url": "https://github.com/sponsors/Neos21"
+  },
+  "devDependencies": {
+    "uglify-js": "3.16.3"
+  }
+}

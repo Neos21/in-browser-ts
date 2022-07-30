@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Google Search Console -->
+    <meta name="google-site-verification" content="ls7kuvIKSqVa_dcixqKvFwl393swvYMkHCkG-xtlCj0">
+    <title>@neos21/in-browser-ts : In Browser TS</title>
+    <link rel="icon" href="https://neos21.github.io/favicon.ico">
+    <!-- Global Site Tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-LP3ZQV2R3M"></script>
+    <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-LP3ZQV2R3M');gtag('config','UA-106501-6');</script>
+    <!-- Google AdSense -->
+    <script data-ad-client="ca-pub-6475907504235292" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    
+    <!-- If You Want To See Debug Log, Write This Code Before Loading In Browser TS -->
+    <script>window.inBrowserTsIsOutputLog = true;</script>
+    
+    <!-- Load TypeScript JS (Min) -->
+    <script src="./typescript.min.js"></script>
+    
+    <!-- Load In Browser TS (Min) -->
+    <script src="./in-browser-ts.min.js"></script>
+    
+    <!-- Example Scripts -->
+    <script src="./example-external-head.ts" type="text/typescript"></script>
+    <script type="text/typescript">
+      const internalHeadNow: Date = new Date();
+      const internalHeadText: string = 'This is internal TypeScript code in "head" element.';
+      console.log(internalHeadNow, internalHeadText);
+      (async () => {
+        await new Promise(resolve => setTimeout(resolve, 1000));
+        document.getElementById('example-internal-head')?.innerText = internalHeadText;
+      })();
+    </script>
+  </head>
+  <body>
+
+<h1>@neos21/in-browser-ts : In Browser TS</h1>
+<p>See Console Log.</p>
+<ul>
+  <li>External TypeScript in &quot;head&quot; element : [<span id="example-external-head"></span>]</li>
+  <li>Internal TypeScript in &quot;head&quot; element : [<span id="example-internal-head"></span>]</li>
+  <li>External TypeScript in &quot;body&quot; element : [<span id="example-external-body"></span>]</li>
+  <li>Internal TypeScript in &quot;body&quot; element : [<span id="example-internal-body"></span>]</li>
+</ul>
+<ul>
+  <li>Test : <a href="./index.html">Source Separated Version</a></li>
+  <li>Test : <a href="./test-min-separated.html">Minified Separated Version</a></li>
+  <li>Test : <a href="./test-src-bundle.html">Source Bundle Version</a></li>
+  <li>Test : <a href="./test-min-bundle.html">Minified Separated Version</a></li>
+</ul>
+
+<!-- Example Scripts -->
+<script src="./example-external-body.ts" type="text/typescript"></script>
+<script type="text/typescript">
+  const internalBodyNow: Date = new Date();
+  const internalBodyText: string = 'This is internal TypeScript code in "body" element.';
+  console.log(internalBodyNow, internalBodyText);
+  document.getElementById('example-internal-body')?.innerText = internalBodyText;
+</script>
+<!-- Example : External File Does Not Found -->
+<script src="./example-does-not-exist.ts" type="text/typescript"></script>
+<!-- Example : Empty Internal Script -->
+<script type="text/typescript"></script>
+
+  </body>
+</html>
